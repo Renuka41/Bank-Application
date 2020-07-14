@@ -115,7 +115,7 @@ accountnum=rset.getInt(1);}
 			rs.next();
 			bal=rs.getInt(1);
 			ps.close();
-			bal=bal-accountbal;
+			bal=bal+accountbal;
 			PreparedStatement pst=con.prepareStatement("update customer set accountbal=? where accountnum=?");
 			pst.setInt(1, bal);
 			pst.setInt(2, accountnum);
